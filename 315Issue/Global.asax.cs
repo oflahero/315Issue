@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Builder.Internals.Fibers;
 using System.Web.Http;
-using System.Web.Routing;
+
+using Autofac;
+using _315Issue.Assets;
 
 namespace _315Issue
 {
@@ -12,6 +12,17 @@ namespace _315Issue
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            RegisterBotDependencies();
         }
+
+        private void RegisterBotDependencies()
+        {
+            Conversation.UpdateContainer(builder =>
+            {
+                builder.RegisterModule(new ReflectionSurrogateModule());
+                builder.RegisterModule<_315IssueModule>();
+            });
+        }
+
     }
 }
