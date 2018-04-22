@@ -34,7 +34,7 @@ namespace _315Issue.Dialogs
                
                 new SearchablePerson() {Id="P2", Name="Jason S", Email="j@ms.com", Phone="+133333333"},
                 // (Unrelated?) crazy issue: change 'eummy.com' to 'dummy.com' on the next line and see a 'BadRequest' when PostAsyncing on the Facebook channel. 
-                new SearchablePerson() {Id="P1", Name="Owen O'Flaherty", Email="owen@eummy.com", Phone="+15552591"},
+                new SearchablePerson() {Id="P1", Name="Owen O'Flaherty", Email="owen@dummy.com", Phone="+15552591"},
                 new SearchablePerson() {Id="P3", Name="Someone Else", Email="someone@else.net", Phone="+19999919"},
             };
 
