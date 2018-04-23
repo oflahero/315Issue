@@ -181,8 +181,6 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\PublishProfiles\AcuumyQBAI-dev - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\AcuumyQBAI-dev - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
